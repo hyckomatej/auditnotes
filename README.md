@@ -1,42 +1,53 @@
 # AuditNotes
 
-AuditNotes is a VS Code extension for leaving color-coded audit notes directly on code selections. It is designed for security reviews, code audits, and deep review passes where you want persistent, visible annotations without editing the source file itself.
+AuditNotes lets you attach notes to selected code in VS Code. It is meant for audits, reviews, and general code investigation where you want to keep local notes without editing the source itself.
 
 ## Features
 
-- Add audit notes from the editor context menu on any selected code range.
-- Highlight reviewed code with color-coded decorations.
-- Edit, delete, and browse notes from the Audit Notes sidebar.
-- Hover annotated code to preview the note inline.
-- Copy a single note or all notes as Markdown for reports and findings docs.
-- Store notes locally in the workspace so they persist between sessions.
+- Add a note to any selected code range.
+- Highlight ranges with colors.
+- View and edit notes in the sidebar.
+- Preview notes on hover.
+- Copy one note or all notes as Markdown.
+- Keep notes locally in the workspace.
 
-## How It Works
+## Screenshots
 
-1. Select a code range in the editor.
+### Notes Sidebar
+
+<img src="./assets/notes.png" alt="Notes sidebar" width="700" />
+
+### Context Menu
+
+<img src="./assets/menu.png" alt="Context menu" width="520" />
+
+## Usage
+
+1. Select some code in the editor.
 2. Right-click and run `Add Audit Note`.
-3. Write the note in the Audit Notes sidebar and choose a highlight color.
-4. Revisit notes from the sidebar or hover over highlighted code in the editor.
-5. Use `Copy MD` or `Copy All MD` to export notes as Markdown.
+3. Enter the note text in the Audit Notes sidebar.
+4. Pick a color if you want.
+5. Hover highlighted code or use the sidebar to revisit notes.
+6. Use `Copy MD` or `Copy All MD` to export notes.
 
 ## Extension Settings
 
-This extension contributes the following setting:
+This extension adds one setting:
 
 - `auditnotes.defaultColor`: Default background color used for new audit notes.
 
 ## Storage
 
-AuditNotes stores note data in a workspace-root file named `.audit-notes.json`.
+Notes are stored in a workspace-root file named `.audit-notes.json`.
 
-- This file is local project data, not a remote service.
-- If you do not want personal review notes committed to git, keep `.audit-notes.json` in `.gitignore`.
+- This file stays local to the project.
+- If you do not want review notes committed, keep `.audit-notes.json` in `.gitignore`.
 
 ## Requirements
 
 No external service, account, or API key is required.
 
-## Known Limitations
+## Limitations
 
 - Notes are tied to file paths and saved line ranges in the current workspace.
 - Large code edits, file moves, or file renames may require note cleanup or recreation.
@@ -50,5 +61,12 @@ Initial public release of AuditNotes with sidebar note management, inline highli
 ## License
 
 MIT
+
+## Disclaimer
+
+> [!WARNING]
+> This extension was vibecoded and may contain bugs, rough edges, or broken behavior.
+> If you hit an issue or have an idea for improvement, please open an issue on GitHub:
+> https://github.com/hyckomatej/auditnotes/issues
 
 

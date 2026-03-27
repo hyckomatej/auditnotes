@@ -64,9 +64,10 @@ MIT
 
 ## Disclaimer
 
-> [!WARNING]
-> This extension was vibecoded and may contain bugs, rough edges, or broken behavior.
-> If you hit an issue or have an idea for improvement, please open an issue on GitHub:
-> https://github.com/hyckomatej/auditnotes/issues
+This extension was vibecoded and may contain bugs, rough edges, or broken behavior.
+
+If you hit an issue or have an idea for improvement, please open an issue on GitHub:
+
+https://github.com/hyckomatej/auditnotes/issues
 
 

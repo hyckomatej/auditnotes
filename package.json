@@ -4,7 +4,7 @@
   "displayName": "AuditNotes",
   "description": "Add color-coded audit notes to code selections, review them in a sidebar, and copy them as Markdown.",
   "icon": "assets/icon.jpg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",

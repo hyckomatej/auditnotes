@@ -9,7 +9,15 @@ export function activate(context: vscode.ExtensionContext) {
     const sidebarProvider = new NoteSidebarProvider(context.extensionUri);
 
     context.subscriptions.push(
-        vscode.window.registerWebviewViewProvider(NoteSidebarProvider.viewType, sidebarProvider)
+        vscode.window.registerWebviewViewProvider(
+            NoteSidebarProvider.viewType,
+            sidebarProvider,
+            {
+                webviewOptions: {
+                    retainContextWhenHidden: true
+                }
+            }
+        )
     );
 
     context.subscriptions.push(
@@ -59,6 +67,9 @@ export function activate(context: vscode.ExtensionContext) {
             if (editor && event.document === editor.document) {
                 noteManager.updateDecorations(editor);
             }
+        }),
+        noteManager.onDidNotesChange(() => {
+            sidebarProvider.syncWithNotes();
         }),
         { dispose: () => noteManager.dispose() }
     );

@@ -13,11 +13,16 @@ export interface AuditNote {
     range: AuditNoteRange;
     text: string;
     color: string;
+    categories?: string[];
 }
 
 export interface AuditNotesData {
     version: string;
     notes: AuditNote[];
+    uiState?: {
+        collapsedStates?: { [key: string]: boolean };
+        fileGroupingStates?: { [key: string]: boolean };
+    };
 }
 
 export function toVsCodeRange(range: AuditNoteRange): vscode.Range {

@@ -6,6 +6,11 @@ export interface AuditColor {
 
 export const AUDIT_COLORS: AuditColor[] = [
     { 
+        label: 'White', 
+        background: 'rgba(255, 255, 255, 0.2)', 
+        vibrant: 'rgba(255, 255, 255, 1.0)' 
+    },
+    { 
         label: 'Red', 
         background: 'rgba(255, 82, 82, 0.15)', 
         vibrant: 'rgba(255, 82, 82, 1.0)' 
@@ -50,11 +55,6 @@ export const AUDIT_COLORS: AuditColor[] = [
         background: 'rgba(0, 150, 136, 0.15)', 
         vibrant: 'rgba(0, 150, 136, 1.0)' 
     },
-    { 
-        label: 'Lime', 
-        background: 'rgba(205, 220, 57, 0.15)', 
-        vibrant: 'rgba(205, 220, 57, 1.0)' 
-    }
 ];
 
 export function getAuditColorByBackground(background: string): AuditColor | undefined {
